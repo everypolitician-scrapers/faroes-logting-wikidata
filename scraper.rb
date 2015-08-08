@@ -38,7 +38,6 @@ end
 
 wikidata_ids(candidates.map { |c| c[:wikiname] }).each do |p|
   data = WikiData::Fetcher.new(id: p.last).data('fo', 'da') or next
-  puts data
   ScraperWiki.save_sqlite([:id], data)
 end
 
