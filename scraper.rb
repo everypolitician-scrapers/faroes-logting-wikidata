@@ -47,5 +47,5 @@ no[2015] = EveryPolitician::Wikidata.wikipedia_xpath(
   xpath: '//table[@class="navbox"]//td[contains(@class,"navbox-list")]//a[not(@class="new")]/@title',
 )
  
-EveryPolitician::Wikidata.scrape_wikidata(names: { fo: names_fo, no: no.values.inject(&:|) }, output: false)
+EveryPolitician::Wikidata.scrape_wikidata(names: { fo: names_fo, no: no.values.inject(&:|), nb: [] }, output: false)
 
